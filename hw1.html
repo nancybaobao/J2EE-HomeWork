@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>This is a Heading</title>
+    <style type="text/css">
+    { margin: 0; padding: 0; }
+    html {
+      background: url('http://cdn.wonderfulengineering.com/wp-content/uploads/2016/01/Desktop-Wallpaper-33.jpg') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    body {
+      text-align: center;
+    }
+    p.greeting {
+      font-family: verdana;
+      color: white;
+      text-align: center;
+      font-size: 350%;
+    }
+    p.focusing {
+      font-family: verdana;
+      color: white;
+      text-align: center;
+      font-size: 200%;
+    }
+    table.center {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    td {
+      color: white;
+    }
+    </style>
+    <script type="text/javascript">
+    function add() {
+      var num1 = document.getElementById("number1").value;
+      var num2 = document.getElementById("number2").value;
+      document.getElementById("result").value = Math.abs(num1) + Math.abs(num2);
+    }
+    function minus() {
+      var num1 = document.getElementById("number1").value;
+      var num2 = document.getElementById("number2").value;
+      document.getElementById("result").value = Math.abs(num1) - Math.abs(num2);
+    }
+    function multiply() {
+      var num1 = document.getElementById("number1").value;
+      var num2 = document.getElementById("number2").value;
+      document.getElementById("result").value = Math.abs(num1) * Math.abs(num2);
+    }
+    function divide() {
+      var num1 = document.getElementById("number1").value;
+      var num2 = document.getElementById("number2").value;
+      if (Math.abs(num2) == 0) {
+        document.getElementById("result").value = "Invalid Input!";
+      } else {
+        document.getElementById("result").value = Math.abs(num1) / Math.abs(num2);
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <p class="greeting"><br/><br/>Hello!<br/></p>
+  <table class="center">
+    <tr>
+      <td>X: </td>
+      <td>
+        <input id="number1" type="text" value="0"/></td>
+    </tr>
+    <tr>
+      <td>Y: </td>
+      <td>
+        <input id="number2" type="text" value="0"/></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+      <input id="add" type="button" value=" + " onclick="add()"/>
+      <input id="minus" type="button" value=" - " onclick="minus()"/>
+      <input id="multiply" type="button" value=" * " onclick="multiply()"/>
+      <input id="divide" type="button" value=" / " onclick="divide()"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Answer: </td>
+      <td>
+        <input id="result" type="text" disabled="disabled" value="0"/>
+      </td>
+    </tr>
+
+  </table>
+  
+  </body>
+</html>
+
